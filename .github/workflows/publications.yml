@@ -36,9 +36,9 @@ jobs:
           python-version: '3.11'
       
       - name: Install dependencies
-        run: pip install scholarly pyyaml anthropic
-      
-      - name: Run Scholar scraper
+        run: pip install requests pyyaml anthropic
+
+      - name: Run OpenAlex scraper
         run: python3 scripts/scraper.py
         
       - name: Auto-classify new papers
