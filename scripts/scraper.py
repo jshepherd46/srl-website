@@ -125,16 +125,26 @@ def main():
     
     if new_papers:
         # Sort by year descending
-        new_papers.sort(key=lambda p: p.get("year", 0), reverse=True)
+        def _year_key(p):
+            y = p.get("year")
+            try:
+                return int(y)
+            except (TypeError, ValueError):
+                return 0
+        new_papers.sort(key=_year_key, reverse=True)
         
-        with open(NEW_PAPERS_FILE, "w") as f:
+        with open(NEW_PAPERS_FILE, "w", encoding="utf-8") as f:
             yaml.dump(new_papers, f, allow_unicode=True, default_flow_style=False, sort_keys=False)
         
         print(f"\nNew papers written to: {NEW_PAPERS_FILE}")
         print("Next step: run classify.py to auto-propose tags, then review and merge.")
         print("\nNew paper titles:")
         for p in new_papers:
-            print(f"  [{p['year']}] {p['title'][:80]}")
+            line = f"  [{p['year']}] {p['title'][:80]}"
+            try:
+                print(line)
+            except UnicodeEncodeError:
+                sys.stdout.buffer.write(line.encode("utf-8", errors="replace") + b"\n")
     else:
         print("\nNo new papers found. Library is up to date.")
     

@@ -1,0 +1,7 @@
+new_papers_staging.yaml
+classified_papers.yaml
+publications_backup_*.yaml
+_site/
+__pycache__/
+*.pyc
+.venv/
