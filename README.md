@@ -8,6 +8,22 @@ This repo houses two independent concerns that share the same home:
 
 The two don't interfere: Jekyll's `exclude:` in `_config.yml` keeps the pipeline's files out of the site build, and the pipeline writes its rendered HTML into a `publications/` directory that Jekyll then serves normally.
 
+## Migration status
+
+Mid-migration from WordPress. The old WP site remains canonical at the custom domain; this Jekyll site is a staging ground at `https://jshepherd46.github.io/shepherdresearchlab/` until content is complete and DNS is cut over.
+
+- ✅ Scaffold — Jekyll config, layouts, includes, stylesheet (UH Mānoa green)
+- 🟡 Content — homepage migrated (pilot); 36 pages remaining (`about/`, `team/`, `contact/`, research pages, 18 team-member pages, etc.)
+- ⬜ Services — Mailchimp / Formspree embeds not yet wired
+- ⬜ Publications pipeline handoff — pipeline runs monthly and emits YAML/HTML/RIS/BibTeX; output is not yet routed into the Jekyll site's `publications/` path
+- ⬜ DNS cutover — custom domain `shepherdresearchlab.org` still points at the WordPress host
+
+## Content conventions
+
+- **URL preservation.** We match WordPress URLs where feasible. Keeping permalinks stable means existing external links (papers, partner sites, search engines) still resolve after DNS cutover. This is why subdomains (`blog.`, `shapeup.`, `aiphi.`) stay on WordPress for now — migrating them would mean a second-phase URL discussion.
+- **Images live at `wp-content/uploads/YYYY/MM/` at the repo root**, not under `/assets/`. That mirrors WP's original image URLs, so a link like `shepherdresearchlab.org/wp-content/uploads/2022/03/figure.png` keeps working after cutover. Reference from Markdown as `{{ site.baseurl }}/wp-content/uploads/…`.
+- **Content extraction.** The old WP site is built with Elementor (a visual page builder), which produces nested widget markup that doesn't convert cleanly to Markdown by scraping. We extract page content via AI-assisted fetch and write it as simple Markdown inside HTML section wrappers. See `index.html` for the pattern — each section is `<section class="section">…<div class="container" markdown="1">…Markdown…</div></section>`, alternating with `.section--alt` for visual separation.
+
 ## How to update content
 
 ### Homepage
