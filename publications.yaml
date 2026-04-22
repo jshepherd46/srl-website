@@ -1,0 +1,7 @@
+# publications.yaml — canonical SRL publication library
+#
+# Each entry follows the schema documented in AGENT.md.
+# Use scripts/build_pubs.py to render HTML / RIS / BibTeX from this file.
+# Tags must be drawn from tags.yaml.
+
+[]

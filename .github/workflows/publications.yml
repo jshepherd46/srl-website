@@ -1,0 +1,99 @@
+name: Publications Pipeline
+
+on:
+  # Run weekly on Mondays at 8am UTC
+  schedule:
+    - cron: '0 8 * * 1'
+  
+  # Allow manual trigger from GitHub Actions UI or via API (agent can call this)
+  workflow_dispatch:
+    inputs:
+      auto_merge:
+        description: 'Auto-merge classified papers without review (true/false)'
+        required: false
+        default: 'false'
+
+  # Also rebuild publications on every push to main
+  push:
+    branches: [main]
+    paths:
+      - 'publications.yaml'
+      - 'tags.yaml'
+      - 'scripts/build_pubs.py'
+
+jobs:
+  discover-and-classify:
+    # Only run discovery on scheduled/manual runs, not on push
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: pip install scholarly pyyaml anthropic
+      
+      - name: Run Scholar scraper
+        run: python3 scripts/scraper.py
+        
+      - name: Auto-classify new papers
+        if: hashFiles('new_papers_staging.yaml') != ''
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python3 scripts/classify.py
+      
+      - name: Auto-merge if enabled
+        if: |
+          github.event.inputs.auto_merge == 'true' && 
+          hashFiles('classified_papers.yaml') != ''
+        run: python3 scripts/merge.py --auto
+      
+      - name: Open PR with new papers for review
+        if: |
+          github.event.inputs.auto_merge != 'true' && 
+          hashFiles('classified_papers.yaml') != ''
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: new-publications
+          title: "📚 New publications found — tags need review"
+          body: |
+            The weekly Scholar scraper found new publications.
+            
+            **Action required:** Review `classified_papers.yaml`, adjust tags if needed, 
+            then approve this PR to merge into the library.
+            
+            After merging, the site will rebuild automatically with the new papers.
+          commit-message: "chore: add newly discovered publications (unreviewed)"
+          labels: publications, needs-review
+
+  build-site:
+    # Always rebuild site on push to main
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: pip install pyyaml
+      
+      - name: Build publication pages and exports
+        run: python3 scripts/build_pubs.py
+      
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+          keep_files: true

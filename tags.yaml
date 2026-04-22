@@ -1,0 +1,103 @@
+# SRL Publications Tag Taxonomy
+# This file is the shared vocabulary used by both the website build and the Claude agent
+# when auto-classifying new papers. Keep it updated as new studies launch.
+#
+# Usage: A paper can have multiple tags. The website filters by tag to show
+# relevant publications on each research/study page.
+
+studies:
+  - tag: 3cb
+    label: "Three-Compartment Breast (3CB)"
+    description: "Dual-energy compositional breast imaging for malignancy detection"
+  - tag: shape-up
+    label: "Shape Up!"
+    description: "3D optical body scanning and blood biomarkers across the lifecourse"
+  - tag: maps
+    label: "MAPS"
+    description: "Morphometric analysis of DXA images at population scale"
+  - tag: makawalu
+    label: "Makawalu"
+    description: "XAI concept bottleneck model for POCUS breast cancer detection in USAPI"
+  - tag: hipimr
+    label: "HIPIMR"
+    description: "Hawaii and Pacific Islands Mammography Registry"
+  - tag: halo
+    label: "HALO"
+    description: "Hawaii Liver Cancer IO Outcomes - HCC immunotherapy NHPI cohort"
+  - tag: phanes
+    label: "PHANES"
+    description: "Pacific Human Performance and Environmental Resilience Network"
+  - tag: impact
+    label: "IMPACT"
+    description: "UG3/UH3 cooperative agreement study"
+  - tag: pacificfed
+    label: "PacificFed"
+    description: "Federated clinical AI for USAPI/CCPI networks"
+  - tag: ibdw
+    label: "IBDW"
+    description: "International Breast Density Workshop"
+  - tag: dxa-qc
+    label: "DXA Quality Control"
+    description: "DXA quality control systems and cross-manufacturer harmonization"
+  - tag: bcepem
+    label: "Body Composition Lab"
+    description: "Clinical body composition assessment services"
+
+research_areas:
+  - tag: breast-density
+    label: "Breast Density"
+    description: "Mammographic density measurement and risk"
+  - tag: body-composition
+    label: "Body Composition"
+    description: "Body composition measurement, methods, and health outcomes"
+  - tag: ai
+    label: "Artificial Intelligence"
+    description: "Machine learning, deep learning, AI-assisted diagnosis"
+  - tag: risk-modeling
+    label: "Risk Modeling"
+    description: "Cancer risk prediction and biomarker development"
+  - tag: federated-learning
+    label: "Federated Learning"
+    description: "Distributed/privacy-preserving machine learning"
+  - tag: health-equity
+    label: "Health Equity"
+    description: "Pacific Islander, NHPI, USAPI health disparities"
+  - tag: xai
+    label: "Explainable AI"
+    description: "Interpretable and explainable AI methods"
+  - tag: radiomics
+    label: "Radiomics"
+    description: "Quantitative imaging features from medical images"
+  - tag: cancer-screening
+    label: "Cancer Screening"
+    description: "Population-level cancer screening programs and methods"
+  - tag: metabolic-health
+    label: "Metabolic Health"
+    description: "Metabolic syndrome, obesity, cardiometabolic risk"
+
+modalities:
+  - tag: mammography
+    label: "Mammography"
+  - tag: ultrasound
+    label: "Ultrasound / POCUS"
+  - tag: dxa
+    label: "DXA"
+  - tag: optical-scan
+    label: "3D Optical Scanning"
+  - tag: mri
+    label: "MRI"
+  - tag: ct
+    label: "CT"
+  - tag: bioimpedance
+    label: "Bioimpedance"
+
+cohorts:
+  - tag: nhanes
+    label: "NHANES"
+  - tag: framingham
+    label: "Framingham Heart Study"
+  - tag: health-abc
+    label: "Health ABC"
+  - tag: bcsc
+    label: "BCSC"
+    description: "Breast Cancer Surveillance Consortium"
