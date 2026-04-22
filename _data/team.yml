@@ -1,7 +1,9 @@
 # Shepherd Research Lab team roster — drives /about/our-team/.
-# Order below is the display order. PI first, then postdocs,
-# then PhD students, then research staff. Reorder freely.
 # Each entry: name (required), role, photo (path from site root), bio.
+# Set `alumni: true` to move someone from the current section to Alumni.
+# Display order: current members first (in the order listed), then alumni.
+
+# ========== CURRENT MEMBERS ==========
 
 # ---- Principal Investigator ----
 - name: "John A. Shepherd, PhD"
@@ -25,27 +27,7 @@
   photo: /wp-content/uploads/2022/09/Bennett_Jon-e1663615187454.jpg
   bio: "Holds degrees in biology, psychology, and kinesiology, with a PhD in nutritional sciences. Research examines multicompartment body-composition modeling across medical settings, athletes, and the lifespan."
 
-- name: "Michael C. Wong"
-  role: "Postdoctoral Researcher (T32)"
-  photo: /wp-content/uploads/2019/05/michael-1-1.jpg
-  bio: "Analyzes optical imaging data from the Shape Up! study. Background in nutritional sciences."
-
-- name: "Steven D. Buchthal"
-  role: "Postdoctoral Researcher"
-  photo: /wp-content/uploads/2019/04/profile-placeholder.png
-  bio: "Research focuses on body-composition assessment and metabolic health across diverse populations, including adiposity patterns, liver fat distribution, and relationships to glucose metabolism and diabetes risk in multiethnic cohorts."
-
-- name: "Abdur Rasool, PhD"
-  role: "Postdoctoral Fellow"
-  photo: /wp-content/uploads/2025/01/abdur-1-768x1024.jpg
-  bio: "PhD in computer applied technology from the Shenzhen Institute of Advanced Technology. Expertise spans AI, bioinformatics, breast cancer, computer vision, autism, and DNA data storage, with over 35 peer-reviewed publications."
-
 # ---- PhD Students ----
-- name: "Lambert Leong"
-  role: "PhD Student"
-  photo: /wp-content/uploads/2023/02/lambert_headshot2023-e1675456941703-867x1024.png
-  bio: "PhD in Molecular Bioscience and Bio-Engineering at the University of Hawaiʻi. Research focuses on breast imaging and applying ML/AI to cancer risk analysis and detection."
-
 - name: "Arianna Bunnell"
   role: "PhD Student"
   photo: /wp-content/uploads/2025/04/other_sweater_headshot-768x1024.jpg
@@ -62,37 +44,67 @@
   photo: /wp-content/uploads/2019/05/leila-1-1.png
   bio: "Certified senior CRC manager with expertise in MRI and bone densitometry. A decade of research experience and contributions to major studies including NHANES and NIH R01 projects."
 
-- name: "Nisa Kelly"
-  role: "Clinical Research Coordinator"
-  photo: /wp-content/uploads/2019/05/nisa-1-1.jpg
-  bio: "Background in biochemistry and medical health sciences; coordinates the Shape Up! Studies. Co-author on publications examining optical imaging for pediatric body composition."
-
 - name: "Valerie Saiki"
   role: "DXA Technologist & Clinical Study Coordinator"
   photo: /wp-content/uploads/2023/07/Valerie_headshot-684x1024.jpg
   bio: "Certified radiologic technologist (Oʻahu) working at SRL as DXA technologist and clinical study coordinator."
-
-- name: "Laarni Igawa"
-  role: "Clinical Research Coordinator"
-  photo: /wp-content/uploads/2019/05/laarni-1-1.jpg
-  bio: "Background in Public Health with a focus on epidemiology, and extensive laboratory experience in infectious-disease research."
-
-- name: "Devon Cataldi, PhD(c), ATC"
-  role: "Researcher"
-  photo: /wp-content/uploads/2021/12/Cataldi_Headshot-e1639785292375.jpg
-  bio: "PhD candidate in Kinesiology and Rehabilitation Science, with degrees in Athletic Training and Corrective Exercise. Research centers on body composition and human performance."
 
 - name: "En Yong Liu"
   role: "Exercise Physiologist · Body Composition Lab Manager"
   photo: /wp-content/uploads/2019/05/en-1-1.jpg
   bio: "Manages the Body Composition Lab. Background in Kinesiology with an emphasis in Neuromuscular Science. Interests include body-composition assessment via 3D optical imaging and fitness tracking."
 
-- name: "Nusrat Zaman Zemi"
-  role: "Clinical Research Associate"
-  photo: /wp-content/uploads/2023/06/Nusrat-Zemi-scaled-e1687816319413-763x1024.jpg
-  bio: "Designs and implements software and hardware solutions for breast ultrasound imaging focused on cancer risk analysis and detection. Pursuing an MSc in Electrical and Computer Engineering at UH Mānoa."
-
 - name: "Aimee Bowen"
   role: "Web Developer"
   photo: /wp-content/uploads/2023/06/aimee_withleis-731x1024.jpg
   bio: "Web developer for the Shepherd Research Lab."
+
+# ========== ALUMNI ==========
+
+- name: "Nusrat Zaman Zemi"
+  role: "Clinical Research Associate"
+  photo: /wp-content/uploads/2023/06/Nusrat-Zemi-scaled-e1687816319413-763x1024.jpg
+  bio: "Designed and implemented software and hardware solutions for breast ultrasound imaging focused on cancer risk analysis and detection. Pursued an MSc in Electrical and Computer Engineering at UH Mānoa."
+  alumni: true
+
+- name: "Laarni Igawa"
+  role: "Clinical Research Coordinator"
+  photo: /wp-content/uploads/2019/05/laarni-1-1.jpg
+  bio: "Background in Public Health with a focus on epidemiology, and extensive laboratory experience in infectious-disease research."
+  alumni: true
+
+- name: "Devon Cataldi, PhD(c), ATC"
+  role: "Researcher"
+  photo: /wp-content/uploads/2021/12/Cataldi_Headshot-e1639785292375.jpg
+  bio: "PhD candidate in Kinesiology and Rehabilitation Science, with degrees in Athletic Training and Corrective Exercise. Research centered on body composition and human performance."
+  alumni: true
+
+- name: "Nisa Kelly"
+  role: "Clinical Research Coordinator"
+  photo: /wp-content/uploads/2019/05/nisa-1-1.jpg
+  bio: "Background in biochemistry and medical health sciences; coordinated the Shape Up! Studies. Co-author on publications examining optical imaging for pediatric body composition."
+  alumni: true
+
+- name: "Lambert Leong"
+  role: "PhD Student"
+  photo: /wp-content/uploads/2023/02/lambert_headshot2023-e1675456941703-867x1024.png
+  bio: "PhD in Molecular Bioscience and Bio-Engineering at the University of Hawaiʻi. Research focused on breast imaging and applying ML/AI to cancer risk analysis and detection."
+  alumni: true
+
+- name: "Abdur Rasool, PhD"
+  role: "Postdoctoral Fellow"
+  photo: /wp-content/uploads/2025/01/abdur-1-768x1024.jpg
+  bio: "PhD in computer applied technology from the Shenzhen Institute of Advanced Technology. Expertise spans AI, bioinformatics, breast cancer, computer vision, autism, and DNA data storage, with over 35 peer-reviewed publications."
+  alumni: true
+
+- name: "Steven D. Buchthal"
+  role: "Postdoctoral Researcher"
+  photo: /wp-content/uploads/2019/04/profile-placeholder.png
+  bio: "Research focused on body-composition assessment and metabolic health across diverse populations, including adiposity patterns, liver fat distribution, and relationships to glucose metabolism and diabetes risk in multiethnic cohorts."
+  alumni: true
+
+- name: "Michael C. Wong"
+  role: "Postdoctoral Researcher (T32)"
+  photo: /wp-content/uploads/2019/05/michael-1-1.jpg
+  bio: "Analyzed optical imaging data from the Shape Up! study. Background in nutritional sciences."
+  alumni: true

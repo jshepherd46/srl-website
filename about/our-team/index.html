@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Our Team"
-description: "The research scientists, postdocs, PhD students, and staff of the Shepherd Research Lab."
+description: "The research scientists, postdocs, PhD students, and staff — current and alumni — of the Shepherd Research Lab."
 ---
 
 <section class="section">
@@ -12,7 +12,7 @@ description: "The research scientists, postdocs, PhD students, and staff of the 
     </div>
 
     <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
-      {% for person in site.data.team %}
+      {% for person in site.data.team %}{% unless person.alumni %}
       <div class="feature-card" style="text-align: center;">
         {% if person.photo %}
         <img src="{{ site.baseurl }}{{ person.photo }}" alt="{{ person.name }}" loading="lazy" style="width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: center top; border-radius: var(--radius-lg); margin-bottom: 1.25rem;">
@@ -21,7 +21,29 @@ description: "The research scientists, postdocs, PhD students, and staff of the 
         <p style="color: var(--primary); font-weight: 600; font-size: 0.8rem; margin-bottom: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em;">{{ person.role }}</p>
         <p style="font-size: 0.9rem; color: var(--gray-700);">{{ person.bio }}</p>
       </div>
-      {% endfor %}
+      {% endunless %}{% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div style="text-align:center; max-width: 680px; margin: 0 auto 3rem;">
+      <h2 style="margin-bottom: 0.75rem;">Alumni</h2>
+      <p style="color: var(--gray-500);">Former SRL members who have moved on to next chapters.</p>
+    </div>
+
+    <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
+      {% for person in site.data.team %}{% if person.alumni %}
+      <div class="feature-card" style="text-align: center; padding: 1.5rem;">
+        {% if person.photo %}
+        <img src="{{ site.baseurl }}{{ person.photo }}" alt="{{ person.name }}" loading="lazy" style="width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: center top; border-radius: var(--radius-lg); margin-bottom: 1rem;">
+        {% endif %}
+        <h3 style="font-size: 0.95rem; margin-bottom: 0.25rem;">{{ person.name }}</h3>
+        <p style="color: var(--gray-500); font-size: 0.75rem; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.04em;">{{ person.role }}</p>
+        <p style="font-size: 0.85rem; color: var(--gray-700);">{{ person.bio }}</p>
+      </div>
+      {% endif %}{% endfor %}
     </div>
   </div>
 </section>
