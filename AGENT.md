@@ -14,7 +14,7 @@ It is the canonical source of truth for all publications displayed at shepherdre
 **The pipeline:**
 1. `publications.yaml` — master library of all publications with tags
 2. `tags.yaml` — the classification taxonomy (study tags, research areas, modalities, cohorts)
-3. `scripts/scraper.py` — finds new papers on Google Scholar
+3. `scripts/scraper.py` — finds new papers on OpenAlex (author A5069392685 / ORCID 0000-0003-2280-2541)
 4. `scripts/classify.py` — uses Claude API to propose tags for new papers
 5. `scripts/merge.py` — merges approved papers into publications.yaml
 6. `scripts/build_pubs.py` — generates HTML pages, RIS, and BibTeX from the library
@@ -30,14 +30,22 @@ It is the canonical source of truth for all publications displayed at shepherdre
 4. Run `python3 scripts/build_pubs.py` to verify it builds without errors
 5. Commit and push — the site will rebuild automatically
 
-### Run the discovery pipeline
+### Run the discovery pipeline (local)
 ```bash
-python3 scripts/scraper.py          # find new papers
-python3 scripts/classify.py         # auto-tag them
+python3 scripts/scraper.py          # find new papers (OpenAlex)
+python3 scripts/classify.py         # auto-tag them (claude-sonnet-4-6)
 # Review classified_papers.yaml
 python3 scripts/merge.py --auto     # merge if auto-approved
 python3 scripts/build_pubs.py       # rebuild site
 ```
+
+### Scheduled / CI flow
+Discovery runs automatically on the **1st of each month at 8am UTC** via
+`.github/workflows/publications.yml`, and can be triggered manually from the
+Actions tab. The workflow runs `scraper → classify → merge --auto` in the
+runner, then opens a PR titled "📚 New publications — tags need review"
+containing the resulting `publications.yaml` diff. Review the tags in the
+PR (edit inline if needed); merging triggers the site-build job.
 
 ### Check papers for a specific tag
 ```bash
@@ -86,7 +94,8 @@ python3 scripts/build_pubs.py --ris-only
   pages: "298"                        # or "1-12" format
   doi: "10.1038/s41746-024-01289-0"   # without https://doi.org/ prefix
   abstract: "First 500 chars..."      # optional, truncate long abstracts
-  scholar_url: "https://..."          # Google Scholar link if available
+  openalex_id: "W4412712238"          # OpenAlex work ID (without https://openalex.org/ prefix)
+  source_url: "https://..."           # landing page URL from OpenAlex, if available
   tags:
     - body-composition
     - dxa
