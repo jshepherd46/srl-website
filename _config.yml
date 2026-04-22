@@ -1,0 +1,51 @@
+title: "Shepherd Research Lab"
+description: "Research lab at the University of Hawaiʻi Cancer Center — quantitative imaging, breast cancer risk, body composition, and AI for health."
+baseurl: "/shepherdresearchlab"
+url: "https://jshepherd46.github.io"
+
+# Lab details
+lab:
+  pi: "John Shepherd, PhD"
+  institution: "University of Hawaiʻi Cancer Center"
+
+# Contact — fill in a lab admin email before launch
+contact_email: ""
+
+# Primary navigation (inner pages can link out to the rest)
+nav:
+  - title: "About"
+    url: "/about/"
+  - title: "Team"
+    url: "/team/"
+  - title: "Research"
+    url: "/research/"
+  - title: "Publications"
+    url: "/publications/"
+  - title: "Join A Study"
+    url: "/join-a-study/"
+  - title: "Contact"
+    url: "/contact/"
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Keep the publications pipeline OUT of the Jekyll build.
+# The pipeline writes its rendered HTML into the publications/ directory;
+# Jekyll picks THAT up normally. Its sources live here but aren't pages.
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - AGENT.md
+  - scripts/
+  - tags.yaml
+  - publications.yaml
+  - new_papers_staging.yaml
+  - classified_papers.yaml
+  - "*.py"
+  - "*.pyc"
+  - __pycache__/

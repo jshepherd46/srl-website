@@ -1,0 +1,45 @@
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-brand">
+      <a href="{{ site.baseurl }}/" class="site-logo" style="margin-bottom: 0;">
+        <div class="site-logo__mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5" fill="none"/>
+            <circle cx="12" cy="12" r="3" fill="currentColor"/>
+          </svg>
+        </div>
+        <div class="site-logo__text">
+          <span class="site-logo__abbr" style="color: white;">SRL</span>
+          <span class="site-logo__full" style="color: rgba(255,255,255,0.5);">Shepherd Research Lab</span>
+        </div>
+      </a>
+      <p>{{ site.lab.pi }} — {{ site.lab.institution }}. Research in quantitative imaging, breast cancer risk, body composition, and AI for health.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        {% for item in site.nav %}
+        <li><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Related</h4>
+      <ul>
+        <li><a href="https://breastdensityworkshop.org" target="_blank" rel="noopener">International Breast Density Workshop ↗</a></li>
+        {% if site.contact_email != "" %}<li><a href="mailto:{{ site.contact_email }}">{{ site.contact_email }}</a></li>{% endif %}
+      </ul>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="footer-bottom">
+      <span>&copy; {{ 'now' | date: "%Y" }} Shepherd Research Lab. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
