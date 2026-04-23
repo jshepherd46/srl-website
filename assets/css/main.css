@@ -190,6 +190,16 @@ p:last-child { margin-bottom: 0; }
   text-decoration: none;
 }
 
+.site-logo__img {
+  height: 44px;
+  width: auto;
+  display: block;
+  flex-shrink: 0;
+}
+
+/* Legacy placeholder mark — unused now the turtle PNG is in place; keep
+   the rule so if anyone re-introduces <div class="site-logo__mark"> it
+   still has reasonable defaults. */
 .site-logo__mark {
   width: 42px;
   height: 42px;
