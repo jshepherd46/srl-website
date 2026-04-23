@@ -5,18 +5,17 @@ description: "Participate in a Shepherd Research Lab study on body composition, 
 ---
 
 <section class="section">
-  <div class="container" markdown="1" style="max-width: 820px;">
+<div class="container" markdown="1" style="max-width: 820px;">
 
 # Join A Study
 
 The Shepherd Research Lab invites participants to join research studies focused on body composition, health-measurement technologies, and related health outcomes.
 
-  </div>
+</div>
 </section>
 
 <section class="section section--alt">
-  <div class="container" style="max-width: 820px;">
-    <div markdown="1">
+<div class="container" markdown="1" style="max-width: 820px;">
 
 ## Shape Up! Keiki
 
@@ -26,13 +25,11 @@ This study helps families learn about their children's health while researchers 
 
 [Learn more at the Shape Up! site ↗](https://shapeup.shepherdresearchlab.org/for-participants/)
 
-    </div>
-  </div>
+</div>
 </section>
 
 <section class="section">
-  <div class="container" style="max-width: 820px;">
-    <div markdown="1">
+<div class="container" markdown="1" style="max-width: 820px;">
 
 ## Tanita Study
 
@@ -42,49 +39,54 @@ This research evaluates the accuracy of TANITA Bioimpedance Analysis (BIA) devic
 
 **Participation:** One visit, approximately 4 hours. Participants receive compensation and a complimentary body-composition measurement including a free DXA scan.
 
-    </div>
-  </div>
+</div>
 </section>
 
 <section class="section section--alt">
-  <div class="container" style="max-width: 820px;">
-    <h2>Get in touch</h2>
-    <p>Interested in participating, or want to be notified when new studies open? Fill in the form below or email us directly.</p>
+<div class="container" markdown="1" style="max-width: 820px;">
 
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem; margin-top: 2rem;">
-      <div>
-        <p><strong>Studies inquiries</strong><br><a href="mailto:bodycompstudies@cc.hawaii.edu">bodycompstudies@cc.hawaii.edu</a><br>808-440-5234</p>
-        <p style="margin-top: 1rem;"><strong>Lab</strong><br>Body Composition Lab<br>701 Ilalo St, Honolulu, HI 96813</p>
-      </div>
+## Get in touch
 
-      <div>
-        <!-- TODO (Phase 3): replace YOUR_FORMSPREE_STUDIES_ID with the real form ID. -->
-        <!-- Final field list TBD with John when the form is created. -->
-        <form action="https://formspree.io/f/YOUR_FORMSPREE_STUDIES_ID" method="POST" style="display: flex; flex-direction: column; gap: 1rem;">
-          <label style="display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.9rem; font-weight: 600;">
-            Your name
-            <input type="text" name="name" required style="padding: 0.65rem 0.9rem; border: 1px solid var(--gray-300); border-radius: var(--radius); font: inherit;">
-          </label>
-          <label style="display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.9rem; font-weight: 600;">
-            Email address
-            <input type="email" name="email" required style="padding: 0.65rem 0.9rem; border: 1px solid var(--gray-300); border-radius: var(--radius); font: inherit;">
-          </label>
-          <label style="display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.9rem; font-weight: 600;">
-            Which study interests you?
-            <select name="study" style="padding: 0.65rem 0.9rem; border: 1px solid var(--gray-300); border-radius: var(--radius); font: inherit;">
-              <option>I'm not sure yet — please contact me</option>
-              <option>Shape Up! Keiki</option>
-              <option>Tanita Study</option>
-              <option>Future studies — just add me to the list</option>
-            </select>
-          </label>
-          <label style="display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.9rem; font-weight: 600;">
-            Anything you'd like us to know
-            <textarea name="message" rows="4" style="padding: 0.65rem 0.9rem; border: 1px solid var(--gray-300); border-radius: var(--radius); font: inherit; resize: vertical;"></textarea>
-          </label>
-          <button type="submit" class="btn btn-primary" style="align-self: flex-start;">Submit</button>
-        </form>
-      </div>
-    </div>
-  </div>
+Interested in participating, or want to be notified when new studies open? Fill in the form below or email us directly.
+
+<div class="contact-grid" markdown="1" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem; margin-top: 2rem;">
+<div markdown="1">
+
+**Studies inquiries**  
+[bodycompstudies@cc.hawaii.edu](mailto:bodycompstudies@cc.hawaii.edu)  
+808-440-5234
+
+**Lab**  
+Body Composition Lab  
+701 Ilalo Street  
+Honolulu, HI 96813
+
+</div>
+<div>
+<!-- TODO (Phase 3): replace YOUR_FORMSPREE_STUDIES_ID with the real form ID. -->
+<!-- Final field list TBD with John when the form is created. -->
+<form action="https://formspree.io/f/YOUR_FORMSPREE_STUDIES_ID" method="POST" style="display: flex; flex-direction: column; gap: 1rem;">
+<label style="display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.9rem; font-weight: 600;">Your name
+<input type="text" name="name" required style="padding: 0.65rem 0.9rem; border: 1px solid var(--gray-300); border-radius: var(--radius); font: inherit;">
+</label>
+<label style="display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.9rem; font-weight: 600;">Email address
+<input type="email" name="email" required style="padding: 0.65rem 0.9rem; border: 1px solid var(--gray-300); border-radius: var(--radius); font: inherit;">
+</label>
+<label style="display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.9rem; font-weight: 600;">Which study interests you?
+<select name="study" style="padding: 0.65rem 0.9rem; border: 1px solid var(--gray-300); border-radius: var(--radius); font: inherit;">
+<option>I'm not sure yet — please contact me</option>
+<option>Shape Up! Keiki</option>
+<option>Tanita Study</option>
+<option>Future studies — just add me to the list</option>
+</select>
+</label>
+<label style="display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.9rem; font-weight: 600;">Anything you'd like us to know
+<textarea name="message" rows="4" style="padding: 0.65rem 0.9rem; border: 1px solid var(--gray-300); border-radius: var(--radius); font: inherit; resize: vertical;"></textarea>
+</label>
+<button type="submit" class="btn btn-primary" style="align-self: flex-start;">Submit</button>
+</form>
+</div>
+</div>
+
+</div>
 </section>
