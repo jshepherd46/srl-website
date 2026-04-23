@@ -1,24 +1,24 @@
 ---
 layout: default
-title: "Publications — Artificial Intelligence"
-description: "Shepherd Research Lab publications tagged ai."
+title: "Publications — Cancer Screening"
+description: "Shepherd Research Lab publications tagged cancer-screening."
 auto_generated: true
 ---
 
 <section class="section">
 <div class="container" markdown="1" style="max-width: 900px;">
 
-# Artificial Intelligence — Publications
+# Cancer Screening — Publications
 
-Papers tagged `ai` — Machine learning, deep learning, AI-assisted diagnosis
+Papers tagged `cancer-screening` — Population-level cancer screening programs and methods
 
 <nav style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1.25rem 0 1.5rem;">
 <a href="{{ site.baseurl }}/publications/" style="padding: 0.35rem 0.8rem; border: 1px solid var(--gray-300); border-radius: 100px; font-size: 0.85rem; text-decoration: none; color: var(--gray-700); font-weight: 600;">← All publications</a>
-<a href="{{ site.baseurl }}/research/ai/" style="padding: 0.35rem 0.8rem; border: 1px solid var(--gray-300); border-radius: 100px; font-size: 0.85rem; text-decoration: none; color: var(--gray-700); font-weight: 600;">AI for Health research page →</a>
+<a href="{{ site.baseurl }}/research/cancer/" style="padding: 0.35rem 0.8rem; border: 1px solid var(--gray-300); border-radius: 100px; font-size: 0.85rem; text-decoration: none; color: var(--gray-700); font-weight: 600;">Cancer research page →</a>
 </nav>
 
 {% assign filtered = site.data.publications | where_exp: "p", "p.exclude != true" %}
-{% assign filtered = filtered | where_exp: "p", "p.tags contains 'ai'" %}
+{% assign filtered = filtered | where_exp: "p", "p.tags contains 'cancer-screening'" %}
 
 {% include publications-list.html entries=filtered %}
 

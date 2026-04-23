@@ -17,7 +17,24 @@ import os
 import sys
 
 PUBLICATIONS_FILE = "_data/publications.yaml"
+TAGS_FILE = "tags.yaml"
 OUTPUT_DIR = "publications"   # Jekyll source path — files served verbatim
+
+# Tags whose per-tag page is hand-curated and should NOT be auto-generated.
+# (Cancer is a multi-tag union, not a single tag, but the URL /publications/cancer/
+# collides with any auto-generated `cancer` tag page — none exists today, but list
+# kept as a safety net.)
+HAND_CURATED_SLUGS = {"cancer"}
+
+# Map tag → /research/<slug>/ crosslink for pages where a matching research-area
+# page exists. Tags not in this map simply link back to /publications/.
+TAG_TO_RESEARCH_PAGE = {
+    "ai": ("/research/ai/", "AI for Health"),
+    "body-composition": ("/research/body-composition/", "Body Composition"),
+    "breast-density": ("/research/cancer/", "Cancer"),
+    "cancer-screening": ("/research/cancer/", "Cancer"),
+    "risk-modeling": ("/research/cancer/", "Cancer"),
+}
 
 
 def load_yaml(filepath):
@@ -127,6 +144,107 @@ def generate_bibtex(publications):
     return "\n\n".join(entries)
 
 
+def generate_tag_page(tag, label, description, research_crosslink):
+    """Return the markdown source for a per-tag publications page."""
+    # Pill-styled nav links — matches the year-nav pattern on the publications
+    # list so the clickability cue (rounded border) is consistent site-wide.
+    pill = (
+        "padding: 0.35rem 0.8rem; border: 1px solid var(--gray-300); "
+        "border-radius: 100px; font-size: 0.85rem; text-decoration: none; "
+        "color: var(--gray-700); font-weight: 600;"
+    )
+    pill_links = [
+        f'<a href="{{{{ site.baseurl }}}}/publications/" style="{pill}">'
+        f'← All publications</a>'
+    ]
+    if research_crosslink:
+        research_url, research_label = research_crosslink
+        pill_links.append(
+            f'<a href="{{{{ site.baseurl }}}}{research_url}" style="{pill}">'
+            f'{research_label} research page →</a>'
+        )
+    nav_html = (
+        '<nav style="display: flex; flex-wrap: wrap; gap: 0.5rem; '
+        'margin: 1.25rem 0 1.5rem;">\n'
+        + "\n".join(pill_links)
+        + "\n</nav>"
+    )
+
+    return f"""---
+layout: default
+title: "Publications — {label}"
+description: "Shepherd Research Lab publications tagged {tag}."
+auto_generated: true
+---
+
+<section class="section">
+<div class="container" markdown="1" style="max-width: 900px;">
+
+# {label} — Publications
+
+Papers tagged `{tag}` — {description}
+
+{nav_html}
+
+{{% assign filtered = site.data.publications | where_exp: "p", "p.exclude != true" %}}
+{{% assign filtered = filtered | where_exp: "p", "p.tags contains '{tag}'" %}}
+
+{{% include publications-list.html entries=filtered %}}
+
+</div>
+</section>
+"""
+
+
+def write_per_tag_pages(publications, taxonomy):
+    """Generate a /publications/<tag>/index.md page for every tag in the
+    taxonomy that has at least one active (non-excluded) paper."""
+    # Build tag → (label, description) lookup from the taxonomy
+    tag_info = {}
+    for category in ["studies", "research_areas", "modalities", "cohorts"]:
+        for item in taxonomy.get(category, []):
+            tag_info[item["tag"]] = (
+                item.get("label", item["tag"]),
+                item.get("description", ""),
+            )
+
+    # Find tags with at least one active paper
+    active_tags = set()
+    for p in publications:
+        if p.get("exclude"):
+            continue
+        for t in p.get("tags", []) or []:
+            if t in tag_info:
+                active_tags.add(t)
+
+    written = 0
+    skipped = 0
+    for tag in sorted(active_tags):
+        if tag in HAND_CURATED_SLUGS:
+            skipped += 1
+            continue
+        label, description = tag_info[tag]
+        research_crosslink = TAG_TO_RESEARCH_PAGE.get(tag)
+
+        page_dir = os.path.join(OUTPUT_DIR, tag)
+        os.makedirs(page_dir, exist_ok=True)
+        page_path = os.path.join(page_dir, "index.md")
+
+        # Only rewrite the file if its content actually differs — keeps
+        # git diffs clean across pipeline runs when tags don't change.
+        new_content = generate_tag_page(tag, label, description, research_crosslink)
+        if os.path.exists(page_path):
+            with open(page_path, "r", encoding="utf-8") as f:
+                old_content = f.read()
+            if old_content == new_content:
+                continue
+        with open(page_path, "w", encoding="utf-8") as f:
+            f.write(new_content)
+        written += 1
+
+    print(f"Per-tag pages: {written} written, {skipped} skipped (hand-curated), {len(active_tags)} active tags total.")
+
+
 def main():
     # --tag lookup (no-write; prints papers matching)
     if "--tag" in sys.argv:
@@ -155,7 +273,10 @@ def main():
         f.write(generate_bibtex(publications))
     print(f"BibTeX export: {bib_path}")
 
-    print("\nBuild complete. Jekyll renders the HTML page from _data/publications.yaml.")
+    taxonomy = load_yaml(TAGS_FILE) if os.path.exists(TAGS_FILE) else {}
+    write_per_tag_pages(publications, taxonomy)
+
+    print("\nBuild complete. Jekyll renders the HTML pages from _data/publications.yaml.")
 
 
 if __name__ == "__main__":

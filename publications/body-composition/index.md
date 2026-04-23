@@ -1,7 +1,8 @@
 ---
 layout: default
 title: "Publications — Body Composition"
-description: "Shepherd Research Lab publications on body composition — DXA, 3D optical scanning, bioimpedance, metabolic-risk modeling."
+description: "Shepherd Research Lab publications tagged body-composition."
+auto_generated: true
 ---
 
 <section class="section">
@@ -9,9 +10,12 @@ description: "Shepherd Research Lab publications on body composition — DXA, 3D
 
 # Body Composition — Publications
 
-Papers tagged `body-composition` — quantifying fat, lean, and bone tissue and relating body shape to disease risk.
+Papers tagged `body-composition` — Body composition measurement, methods, and health outcomes
 
-See also: [all publications]({{ site.baseurl }}/publications/) · [Body Composition research page]({{ site.baseurl }}/research/body-composition/)
+<nav style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1.25rem 0 1.5rem;">
+<a href="{{ site.baseurl }}/publications/" style="padding: 0.35rem 0.8rem; border: 1px solid var(--gray-300); border-radius: 100px; font-size: 0.85rem; text-decoration: none; color: var(--gray-700); font-weight: 600;">← All publications</a>
+<a href="{{ site.baseurl }}/research/body-composition/" style="padding: 0.35rem 0.8rem; border: 1px solid var(--gray-300); border-radius: 100px; font-size: 0.85rem; text-decoration: none; color: var(--gray-700); font-weight: 600;">Body Composition research page →</a>
+</nav>
 
 {% assign filtered = site.data.publications | where_exp: "p", "p.exclude != true" %}
 {% assign filtered = filtered | where_exp: "p", "p.tags contains 'body-composition'" %}
