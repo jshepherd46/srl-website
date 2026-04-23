@@ -9,20 +9,25 @@ description: "Shepherd Research Lab publications on cancer — breast density, c
 
 # Cancer — Publications
 
-Papers tagged with any of `breast-density`, `cancer-screening`, or `risk-modeling` — the three research-area tags collectively representing the lab's cancer work.
+The lab's cancer research surfaces under three research-area tags in our taxonomy. Each section below filters to papers carrying one of those tags. Some papers appear in more than one section when they cross topics.
 
 See also: [all publications]({{ site.baseurl }}/publications/) · [Cancer research page]({{ site.baseurl }}/research/cancer/)
 
-{%- comment -%}
-No single "cancer" tag exists in tags.yaml; cancer research surfaces under
-three tags. A single where_exp with `or` automatically dedupes (each entry
-is tested once and included at most once).
-{%- endcomment -%}
+## Breast Density
 
 {% assign active = site.data.publications | where_exp: "p", "p.exclude != true" %}
-{% assign filtered = active | where_exp: "p", "p.tags contains 'breast-density' or p.tags contains 'cancer-screening' or p.tags contains 'risk-modeling'" %}
+{% assign bd = active | where_exp: "p", "p.tags contains 'breast-density'" %}
+{% include publications-list.html entries=bd %}
 
-{% include publications-list.html entries=filtered %}
+## Cancer Screening
+
+{% assign cs = active | where_exp: "p", "p.tags contains 'cancer-screening'" %}
+{% include publications-list.html entries=cs %}
+
+## Risk Modeling
+
+{% assign rm = active | where_exp: "p", "p.tags contains 'risk-modeling'" %}
+{% include publications-list.html entries=rm %}
 
 </div>
 </section>
