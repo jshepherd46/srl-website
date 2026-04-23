@@ -180,7 +180,7 @@ p:last-child { margin-bottom: 0; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 70px;
+  height: 80px;
 }
 
 .site-logo {
@@ -191,7 +191,7 @@ p:last-child { margin-bottom: 0; }
 }
 
 .site-logo__img {
-  height: 44px;
+  height: 56px;
   width: auto;
   display: block;
   flex-shrink: 0;
