@@ -24,8 +24,30 @@ def load_yaml(filepath):
 
 
 def save_yaml(data, filepath):
-    with open(filepath, "w") as f:
-        yaml.dump(data, f, allow_unicode=True, default_flow_style=False, sort_keys=False)
+    """Dump YAML with a blank line between top-level list items for readability.
+
+    yaml.dump does not emit blank separators between list items natively, so
+    we post-process the dumped string and insert one blank line before each
+    top-level `- ` marker (except the first). The blank lines are pure
+    whitespace that yaml.safe_load ignores, so this only changes the on-disk
+    shape — not what any consumer loads.
+    """
+    text = yaml.dump(
+        data,
+        allow_unicode=True,
+        default_flow_style=False,
+        sort_keys=False,
+    )
+    lines = text.split("\n")
+    out = []
+    for i, line in enumerate(lines):
+        # Top-level list items start with "- " at column 0; nested items are
+        # indented by two+ spaces.
+        if i > 0 and line.startswith("- ") and out and out[-1] != "":
+            out.append("")
+        out.append(line)
+    with open(filepath, "w", encoding="utf-8") as f:
+        f.write("\n".join(out))
 
 
 def doi_exists(existing, doi):
