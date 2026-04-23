@@ -160,10 +160,11 @@ def parse_work(w):
     }
 
 
-def fetch_all_works(author_id):
+def _fetch_filtered(filter_str, label):
+    """Fetch all OpenAlex works matching a single filter expression, paginated."""
     url = "https://api.openalex.org/works"
     params = {
-        "filter": f"author.id:{author_id}",
+        "filter": filter_str,
         "per-page": PAGE_SIZE,
         "cursor": "*",
         "mailto": OPENALEX_MAILTO,
@@ -178,7 +179,7 @@ def fetch_all_works(author_id):
         batch = data.get("results", [])
         all_works.extend(batch)
         meta = data.get("meta") or {}
-        print(f"  page {page}: +{len(batch):4d}  (total {len(all_works)} / {meta.get('count','?')})")
+        print(f"  [{label}] page {page}: +{len(batch):4d}  (total {len(all_works)} / {meta.get('count','?')})")
         next_cursor = meta.get("next_cursor")
         if not next_cursor or not batch:
             break
@@ -187,13 +188,38 @@ def fetch_all_works(author_id):
     return all_works
 
 
+def fetch_all_works(author_id, orcid):
+    """Fetch all works for this author as the UNION of two OpenAlex queries:
+    one by author_id (canonical cluster) and one by ORCID. Deduped by OpenAlex
+    work ID.
+
+    Why both? OpenAlex's author-disambiguation occasionally fails to merge a
+    paper into the canonical author cluster even when the ORCID link is on the
+    paper. The ORCID query catches those strays. In practice the overlap is
+    ~100% for established years; the ORCID query mostly picks up 1-2 strays in
+    the newest years (confirmed: +1 paper in 2026, +1 in 2022 as of 2026-04-23).
+    """
+    by_id = _fetch_filtered(f"author.id:{author_id}", "author_id")
+    by_orcid = _fetch_filtered(f"authorships.author.orcid:{orcid}", "orcid")
+    seen = set()
+    merged = []
+    for w in by_id + by_orcid:
+        wid = w.get("id")
+        if wid and wid not in seen:
+            seen.add(wid)
+            merged.append(w)
+    only_orcid = len(merged) - len(by_id)
+    print(f"  UNION: {len(by_id)} by author_id + {len(by_orcid)} by ORCID = {len(merged)} unique ({only_orcid} only found via ORCID)")
+    return merged
+
+
 def main():
     existing = load_yaml(PUBLICATIONS_FILE)
     print(f"Existing publications in {PUBLICATIONS_FILE}: {len(existing)}")
     known_dois, known_titles = existing_index(existing)
 
     print(f"Fetching works for OpenAlex author {AUTHOR_ID} (ORCID {ORCID})...")
-    works = fetch_all_works(AUTHOR_ID)
+    works = fetch_all_works(AUTHOR_ID, ORCID)
     print(f"Retrieved {len(works)} works from OpenAlex.")
 
     new_papers, skipped_dup = [], 0
