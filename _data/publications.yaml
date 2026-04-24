@@ -4712,12 +4712,13 @@
   source_url: https://doi.org/10.7546/ijba.2022.26.4.000810
   tags: []
   added: '2026-04-23'
-  notes: AUTO-TAGGED (high confidence) - please review
+  notes: AUTO-TAGGED (high confidence) manually reviewed
   tag_confidence: high
   tag_reasoning: This paper is about mathematical stability analysis of bioreactor
     models for industrial waste processing, which has no relevance to any of the cancer
     research, body composition, imaging, or health equity topics covered by the Shepherd
     Research Lab tags.
+  exclude: true
 
 - key: shepherd-2022-19supthsup
   title: '19<sup>th</sup> June: 2<sup>nd</sup> Sunday after Pentecost: Galatians 3.23–29'
@@ -16629,12 +16630,13 @@
   source_url: https://doi.org/10.5040/9781501329227-0025075
   tags: []
   added: '2026-04-23'
-  notes: AUTO-TAGGED (high confidence) - please review
+  notes: AUTO-TAGGED (high confidence) manually reviewed
   tag_confidence: high
   tag_reasoning: This paper is an encyclopedia entry about the cultural theory concept
     of 'myth' authored by Shepherd J, and has no relevance to any of the cancer research,
     imaging, body composition, AI, or health topics covered by the Shepherd Research
     Lab tags.
+  exclude: true
 
 - key: dah-2003-stardom
   title: Stardom
@@ -16653,13 +16655,14 @@
   source_url: https://doi.org/10.5040/9781501329227-0025657
   tags: []
   added: '2026-04-23'
-  notes: AUTO-TAGGED (high confidence) - please review
+  notes: AUTO-TAGGED (high confidence) manually reviewed
   tag_confidence: high
   tag_reasoning: This paper is an encyclopedia entry about the concept of 'stardom'
     in popular music, authored by a Shepherd who appears to be a musicologist (John
     Shepherd), and has no relevance to cancer research, medical imaging, body composition,
     or any of the research areas covered by the Shepherd Research Lab at UH Cancer
     Center.
+  exclude: true
 
 - key: shepherd-2003-musicology
   title: Musicology
@@ -16702,12 +16705,13 @@
   tags:
   - metabolic-health
   added: '2026-04-23'
-  notes: AUTO-TAGGED (high confidence) - please review
+  notes: AUTO-TAGGED (high confidence) manually reviewed
   tag_confidence: high
   tag_reasoning: This paper examines serum advanced glycation end products and C-reactive
     protein in type 2 diabetes mellitus, which relates to cardiometabolic risk biomarkers
     and metabolic health, with co-author J. Shepherd (likely John Shepherd of the
     Shepherd Research Lab).
+  exclude: true
 
 - key: shepherd-2003-obesity
   title: Obesity, metabolic syndrome and cardiovascular risk
@@ -16748,12 +16752,13 @@
   source_url: https://doi.org/10.5040/9781501329227-0026060
   tags: []
   added: '2026-04-23'
-  notes: AUTO-TAGGED (high confidence) - please review
+  notes: AUTO-TAGGED (high confidence) manually reviewed
   tag_confidence: high
   tag_reasoning: This paper is an encyclopedia entry about music venues in the context
     of popular music performance, authored by a different J. Shepherd unrelated to
     the UH Cancer Center research lab, and has no relevance to any of the research
     areas, methods, or studies covered by the available tags.
+  exclude: true
 
 - key: hawkins-2003-notation
   title: Notation
@@ -16777,6 +16782,7 @@
   tag_reasoning: This paper is about music notation in a popular music encyclopedia,
     and has no relevance to cancer research, body composition, medical imaging, or
     any other topic covered by the Shepherd Research Lab's available tags.
+  exclude: true
 
 - key: hilts-2003-groupies
   title: Groupies
@@ -16795,11 +16801,12 @@
   source_url: https://doi.org/10.5040/9781501329227-0024715
   tags: []
   added: '2026-04-23'
-  notes: AUTO-TAGGED (high confidence) - please review
+  notes: AUTO-TAGGED (high confidence) manually reviewed
   tag_confidence: high
   tag_reasoning: This paper is an encyclopedia entry about 'groupies' in popular music
     culture, which has no relevance to any of the research areas, methods, or studies
     covered by the Shepherd Research Lab tags.
+  exclude: true
 
 - key: dah-2003-audience
   title: Audience
@@ -16818,12 +16825,13 @@
   source_url: https://doi.org/10.5040/9781501329227-0024158
   tags: []
   added: '2026-04-23'
-  notes: AUTO-TAGGED (high confidence) - please review
+  notes: AUTO-TAGGED (high confidence) manually reviewed
   tag_confidence: high
   tag_reasoning: This paper is an encyclopedia entry about the concept of 'audience'
     in popular music, authored by a Shepherd (likely John Shepherd the musicologist),
     and has no relevance to cancer research, body composition, imaging, or any other
     topics covered by the Shepherd Research Lab at UH Cancer Center.
+  exclude: true
 
 - key: dah-2003-deviance
   title: Deviance
@@ -16842,11 +16850,12 @@
   source_url: https://doi.org/10.5040/9781501329227-0024513
   tags: []
   added: '2026-04-23'
-  notes: AUTO-TAGGED (high confidence) - please review
+  notes: AUTO-TAGGED (high confidence) manually reviewed
   tag_confidence: high
   tag_reasoning: This paper is an encyclopedia entry about 'Deviance' (deviant behavior
     in society) published in a music encyclopedia, with no relevance to any research
     area covered by the Shepherd Research Lab tags.
+  exclude: true
 
 - key: dah-2003-spectacle
   title: Spectacle
@@ -16865,12 +16874,13 @@
   source_url: https://doi.org/10.5040/9781501329227-0026024
   tags: []
   added: '2026-04-23'
-  notes: AUTO-TAGGED (high confidence) - please review
+  notes: AUTO-TAGGED (high confidence) manually reviewed
   tag_confidence: high
   tag_reasoning: This paper is about the concept of 'spectacle' in popular music from
     a music encyclopedia, authored by a Shepherd who is not the PI of the Shepherd
     Research Lab, and has no relevance to cancer research, body composition, imaging,
     or any other topic covered by the available tags.
+  exclude: true
 
 - key: fabbri-2003-genre
   title: Genre
@@ -16889,12 +16899,13 @@
   source_url: https://doi.org/10.5040/9781501329227-0025909
   tags: []
   added: '2026-04-23'
-  notes: AUTO-TAGGED (high confidence) - please review
+  notes: AUTO-TAGGED (high confidence) manually reviewed
   tag_confidence: high
   tag_reasoning: This paper is about musical genre classification in popular music
     studies, authored by Fabbri and Shepherd for a music encyclopedia, and has no
     relevance to any of the Shepherd Research Lab's cancer, imaging, body composition,
     or health research areas.
+  exclude: true
 
 - key: shepherd-2003-morality
   title: Morality
@@ -16913,12 +16924,13 @@
   source_url: https://doi.org/10.5040/9781501329227-0025023
   tags: []
   added: '2026-04-23'
-  notes: AUTO-TAGGED (high confidence) - please review
+  notes: AUTO-TAGGED (high confidence) manually reviewed
   tag_confidence: high
   tag_reasoning: This paper is an encyclopedia entry about the relationship between
     popular music and morality, which has no relevance to any of the research areas,
     imaging modalities, studies, or health topics covered by the Shepherd Research
     Lab at the University of Hawaii Cancer Center.
+  exclude: true
 
 - key: dah-2003-drugs
   title: Drugs and Addiction
@@ -16937,12 +16949,13 @@
   source_url: https://doi.org/10.5040/9781501329227-0024541
   tags: []
   added: '2026-04-23'
-  notes: AUTO-TAGGED (high confidence) - please review
+  notes: AUTO-TAGGED (high confidence) manually reviewed
   tag_confidence: high
   tag_reasoning: This paper is an encyclopedia entry about drugs and addiction in
     popular music history, with no relevance to any of the Shepherd Research Lab's
     research areas including cancer screening, body composition, medical imaging,
     or health equity.
+  exclude: true
 
 - key: tamlyn-2003-syncopation
   title: Syncopation
@@ -16961,12 +16974,13 @@
   source_url: https://doi.org/10.5040/9781501329234-0013499
   tags: []
   added: '2026-04-23'
-  notes: AUTO-TAGGED (high confidence) - please review
+  notes: AUTO-TAGGED (high confidence) manually reviewed
   tag_confidence: high
   tag_reasoning: This paper is about musical syncopation in popular music, published
     in a music encyclopedia, and has no relevance to any of the cancer research, imaging,
     body composition, AI, or health topics covered by the Shepherd Research Lab at
     UH Cancer Center.
+  exclude: true
 
 - key: prato-2003-humor
   title: Humor
@@ -16985,11 +16999,12 @@
   source_url: https://doi.org/10.5040/9781501329227-0025937
   tags: []
   added: '2026-04-23'
-  notes: AUTO-TAGGED (high confidence) - please review
+  notes: AUTO-TAGGED (high confidence) manually reviewed
   tag_confidence: high
   tag_reasoning: This paper is an encyclopedia entry about humor in popular music,
     completely unrelated to any of the research areas, imaging modalities, studies,
     or health topics covered by the Shepherd Research Lab tags.
+  exclude: true
 
 - key: shepherd-2003-structural
   title: Structural Homology
@@ -17008,12 +17023,13 @@
   source_url: https://doi.org/10.5040/9781501329227-0024015
   tags: []
   added: '2026-04-23'
-  notes: AUTO-TAGGED (high confidence) - please review
+  notes: AUTO-TAGGED (high confidence) manually reviewed
   tag_confidence: high
   tag_reasoning: This paper is about 'structural homology' as a concept in cultural
     studies and music theory, published in a music encyclopedia, and has no relevance
     to any of the Shepherd Research Lab's cancer center research areas, imaging modalities,
     or study cohorts.
+  exclude: true
 
 - key: shepherd-2003-pornography
   title: Pornography
@@ -17032,13 +17048,14 @@
   source_url: https://doi.org/10.5040/9781501329227-0025343
   tags: []
   added: '2026-04-23'
-  notes: AUTO-TAGGED (high confidence) - please review
+  notes: AUTO-TAGGED (high confidence) manually reviewed
   tag_confidence: high
   tag_reasoning: This paper is an encyclopedia entry about pornography in popular
     music history, written by a different Shepherd (John Shepherd, a musicologist),
     and has no relevance to cancer research, medical imaging, body composition, or
     any other topic associated with the Shepherd Research Lab at the University of
     Hawaii Cancer Center.
+  exclude: true
 
 - key: shepherd-2003-style
   title: Style
@@ -17057,12 +17074,13 @@
   source_url: https://doi.org/10.5040/9781501329227-0026040
   tags: []
   added: '2026-04-23'
-  notes: AUTO-TAGGED (high confidence) - please review
+  notes: AUTO-TAGGED (high confidence) manually reviewed
   tag_confidence: high
   tag_reasoning: This paper is a musicology/encyclopedia entry about the concept of
     'style' in popular music, authored by John Shepherd in his capacity as a music
     scholar, and has no relevance to the Shepherd Research Lab's cancer research,
     body composition, imaging, or AI work.
+  exclude: true
 
 - key: shepherd-2003-part
   title: Part Writing
@@ -17081,12 +17099,13 @@
   source_url: https://doi.org/10.5040/9781501329234-010225
   tags: []
   added: '2026-04-23'
-  notes: AUTO-TAGGED (high confidence) - please review
+  notes: AUTO-TAGGED (high confidence) manually reviewed
   tag_confidence: high
   tag_reasoning: This paper is about music composition (part writing) published in
     an encyclopedia of popular music, and has no relevance to any of the cancer research,
     body composition, imaging, or health topics covered by the Shepherd Research Lab
     at the University of Hawaii Cancer Center.
+  exclude: true
 
 - key: dah-2003-death
   title: Death
@@ -17129,13 +17148,14 @@
   source_url: https://doi.org/10.5040/9781501329227-0024399
   tags: []
   added: '2026-04-23'
-  notes: AUTO-TAGGED (high confidence) - please review
+  notes: AUTO-TAGGED (high confidence) manually reviewed
   tag_confidence: high
   tag_reasoning: This paper is an encyclopedia entry about the cultural/historical
     relationship between crime and popular music, authored by Shepherd J (likely John
     Shepherd, a musicologist), and has no relevance to any of the cancer research,
     body composition, imaging, or AI topics covered by the Shepherd Research Lab at
     the University of Hawaii Cancer Center.
+  exclude: true
 
 - key: dah-2003-fans
   title: Fans
@@ -17160,6 +17180,7 @@
     the word 'fan' (as in fanatic/follower), completely unrelated to cancer research,
     body composition, medical imaging, or any topic relevant to the Shepherd Research
     Lab.
+  exclude: true
 
 - key: prevrhal-2002-accuracy
   title: 'Accuracy of CT‐based thickness measurement of thin structures: Modeling
@@ -17354,12 +17375,13 @@
   source_url: https://doi.org/10.1093/oso/9780198201649.003.0010
   tags: []
   added: '2026-04-23'
-  notes: AUTO-TAGGED (high confidence) - please review
+  notes: AUTO-TAGGED (high confidence) manually reviewed
   tag_confidence: high
   tag_reasoning: This paper is a historical/political science publication about George
     Lansbury and the Daily Herald newspaper in post-WWI Britain, with no relevance
     to cancer research, medical imaging, body composition, or any other topic covered
     by the Shepherd Research Lab at the University of Hawaii Cancer Center.
+  exclude: true
 
 - key: shepherd-2002-party
   title: 'Party Leader: Domestic Politics, 1931–1933'
@@ -17381,12 +17403,14 @@
   source_url: https://doi.org/10.1093/oso/9780198201649.003.0015
   tags: []
   added: '2026-04-23'
-  notes: AUTO-TAGGED (high confidence) - please review
+  notes: AUTO-TAGGED (high confidence) manually reviewed
   tag_confidence: high
   tag_reasoning: This paper is about British political history (the 1931 general election
     and the National Government/Labour Party), with no relevance to any of the Shepherd
     Research Lab's scientific research areas in cancer, imaging, body composition,
     or health equity.
+  exclude: true
+
 
 - key: njeh-2001-assessment
   title: Assessment of bone status using speed of sound at multiple anatomical sites
