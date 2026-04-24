@@ -503,7 +503,6 @@
     areas of breast imaging, body composition, cancer screening, AI, or Pacific Islander
     health disparities; the Shepherd co-author is likely a different individual.
   exclude: true
-    
 
 - key: bunnell-2025-deep
   title: Deep Learning Enables Large-Scale Shape and Appearance Modeling in Total-Body
@@ -557,7 +556,6 @@
     cancer research, body composition, imaging, AI, or any of the Shepherd Research
     Lab's scientific focus areas.
   exclude: true
-
 
 - key: bennett-2024-variations
   title: Variations in bioelectrical impedance devices impact raw measures comparisons
@@ -660,7 +658,6 @@
     health research areas; notably, co-author J. Shepherd is listed, suggesting a
     connection to the Shepherd Research Lab.
   exclude: true
-    
 
 - key: bennett-2024-advancing
   title: 'Advancing body composition assessment in patients with cancer: First comparisons
@@ -948,7 +945,6 @@
     as well as the broader body composition and metabolic health research themes.
   exclude: false
 
-
 - key: merritt-2024-dietary
   title: 'Dietary intake and visceral adiposity in older adults: The Multiethnic Cohort
     Adiposity Phenotype study'
@@ -977,7 +973,6 @@
     to body composition measurement and metabolic health outcomes in a diverse/multiethnic
     population.
   exclude: false
-    
 
 - key: sniatynski-2024-dirac
   title: 'The DIRAC framework: Geometric structure underlies roles of and in combining
@@ -1042,7 +1037,6 @@
     in adolescent Chilean girls, directly relevant to breast density measurement,
     DXA methodology, and breast cancer risk modeling during puberty.
   exclude: false
-
 
 - key: valdez-2024-performance
   title: Performance of Progressive Generations of GPT on an Exam Designed for Certifying
@@ -1109,7 +1103,6 @@
     fat assessment) and addressing obesity-cancer links in ethnic/Pacific Islander
     groups, with potential connection to the IMPACT cooperative agreement study.
   exclude: false
-    
 
 - key: lloyd-2024-prospective
   title: The Prospective Association between Early Life Growth and Breast Density
@@ -1210,7 +1203,6 @@
     imaging, body composition, cancer screening, AI for medical imaging, Pacific Islander
     health disparities, etc.).
   exclude: true
-
 
 - key: mccarthy-2024-accurate
   title: Accurate prediction of three-dimensional humanoid avatars for anthropometric
@@ -1353,17 +1345,16 @@
     vitamins intakes&lt;/p&gt;'
   openalex_id: W4393863563
   source_url: https://doi.org/10.1158/1055-9965.25532506.v1
-  tags:
-  - breast-density
-  - body-composition
-  - risk-modeling
+  tags: []
   added: '2026-04-23'
-  notes: AUTO-TAGGED (high confidence) ok
+  notes: Supplementary Table attachment (not a standalone publication) — OpenAlex
+    indexes these as distinct works by DOI; exclude from SRL list.
   tag_confidence: high
   tag_reasoning: This paper examines associations between one-carbon metabolism-related
     vitamin intakes and breast density (ADBV - absolute dense breast volume) in young
     women, directly relating to breast density measurement and cancer risk, with Shepherd
     as a co-author.
+  exclude: true
 
 - key: han-2024-data
   title: Data from The Associations between Intakes of One-Carbon Metabolism–Related
@@ -1409,17 +1400,16 @@
   abstract: '&lt;p&gt;Supplementary Figure 1 shows a flow diagram of study population&lt;/p&gt;'
   openalex_id: W4393863641
   source_url: https://doi.org/10.1158/1055-9965.25532515
-  tags:
-  - breast-density
-  - mammography
-  - risk-modeling
+  tags: []
   added: '2026-04-23'
-  notes: AUTO-TAGGED (medium confidence) ok
+  notes: Supplementary attachment (not a standalone publication) — OpenAlex indexes
+    these as distinct works by DOI; exclude from SRL list.
   tag_confidence: medium
   tag_reasoning: This paper examines associations between one-carbon metabolism vitamins
     and breast density among young women, directly relating to breast density measurement
     and cancer risk, with Shepherd as a co-author suggesting lab involvement, though
     it appears to be a supplementary figure only with limited detail.
+  exclude: true
 
 - key: han-2024-supplementary
   title: Supplementary Table 6 from The Associations between Intakes of One-Carbon
@@ -1437,16 +1427,15 @@
     during young adulthood stratified by alcohol consumption&lt;/p&gt;'
   openalex_id: W4393863666
   source_url: https://doi.org/10.1158/1055-9965.25532497.v1
-  tags:
-  - breast-density
-  - mammography
-  - risk-modeling
+  tags: []
   added: '2026-04-23'
-  notes: AUTO-TAGGED (high confidence) ok
+  notes: Supplementary Table attachment (not a standalone publication) — OpenAlex
+    indexes these as distinct works by DOI; exclude from SRL list.
   tag_confidence: high
   tag_reasoning: This paper examines associations between one-carbon metabolism-related
     vitamin intakes and breast density (ADBV - absolute dense breast volume) in young
     women, directly relating to breast density measurement and cancer risk factors.
+  exclude: true
 
 - key: han-2024-supplementary
   title: Supplementary Table 5 from The Associations between Intakes of One-Carbon
@@ -1464,17 +1453,16 @@
     during young adulthood among nulliparous women&lt;/p&gt;'
   openalex_id: W4393863670
   source_url: http://dx.doi.org/10.1158/1055-9965.25532500
-  tags:
-  - breast-density
-  - mammography
-  - risk-modeling
+  tags: []
   added: '2026-04-23'
-  notes: AUTO-TAGGED (high confidence) ok
+  notes: Supplementary Table attachment (not a standalone publication) — OpenAlex
+    indexes these as distinct works by DOI; exclude from SRL list.
   tag_confidence: high
   tag_reasoning: This paper examines associations between one-carbon metabolism-related
     vitamin intakes and breast density (specifically volume-based density measures
     including ADBV) among young women, directly relating to mammographic density measurement
     and cancer risk, with Shepherd as a co-author.
+  exclude: true
 
 - key: han-2024-supplementary
   title: Supplementary Table 7 from The Associations between Intakes of One-Carbon
@@ -1492,16 +1480,15 @@
     youth and at specific pubertal stages&lt;/p&gt;'
   openalex_id: W4393863695
   source_url: https://doi.org/10.1158/1055-9965.25532494.v1
-  tags:
-  - breast-density
-  - mammography
-  - risk-modeling
+  tags: []
   added: '2026-04-23'
-  notes: AUTO-TAGGED (high confidence) ok
+  notes: Supplementary Table attachment (not a standalone publication) — OpenAlex
+    indexes these as distinct works by DOI; exclude from SRL list.
   tag_confidence: high
   tag_reasoning: This paper examines associations between one-carbon metabolism-related
     vitamin intakes and breast density (ANDBV) in young women across pubertal stages,
     directly relating to breast density measurement and cancer risk modeling.
+  exclude: true
 
 - key: han-2024-supplementary
   title: Supplementary Table 8 from The Associations between Intakes of One-Carbon
@@ -1519,16 +1506,15 @@
     intakes during young adulthood&lt;/p&gt;'
   openalex_id: W4393863696
   source_url: https://doi.org/10.1158/1055-9965.25532491.v1
-  tags:
-  - breast-density
-  - mammography
-  - risk-modeling
+  tags: []
   added: '2026-04-23'
-  notes: AUTO-TAGGED (high confidence) ok
+  notes: Supplementary Table attachment (not a standalone publication) — OpenAlex
+    indexes these as distinct works by DOI; exclude from SRL list.
   tag_confidence: high
   tag_reasoning: This paper examines associations between one-carbon metabolism–related
     vitamin intakes and breast density (ANDBV) in young women, directly relating to
     mammographic breast density measurement and cancer risk modeling.
+  exclude: true
 
 - key: han-2024-supplementary
   title: Supplementary Table 4 from The Associations between Intakes of One-Carbon
@@ -1546,18 +1532,17 @@
     during youth and at specific pubertal stages among nulliparous women&lt;/p&gt;'
   openalex_id: W4393863721
   source_url: https://doi.org/10.1158/1055-9965.25532503
-  tags:
-  - breast-density
-  - risk-modeling
-  - mammography
+  tags: []
   added: '2026-04-23'
-  notes: AUTO-TAGGED (high confidence) ok
+  notes: Supplementary Table attachment (not a standalone publication) — OpenAlex
+    indexes these as distinct works by DOI; exclude from SRL list.
   tag_confidence: high
   tag_reasoning: This supplementary table from a 2024 paper examines associations
     between one-carbon metabolism-related vitamin intakes and breast density (ADBV
     - absolute dense breast volume) measures among young/nulliparous women at various
     pubertal stages, directly relating to breast density measurement and cancer risk
     factors, with Shepherd as a co-author.
+  exclude: true
 
 - key: han-2024-supplementary
   title: Supplementary Table 1 from The Associations between Intakes of One-Carbon
@@ -1575,16 +1560,16 @@
     at specific puberal stages adjusted for young adult intakes&lt;/p&gt;'
   openalex_id: W4393901140
   source_url: https://doi.org/10.1158/1055-9965.25532512
-  tags:
-  - breast-density
-  - risk-modeling
+  tags: []
   added: '2026-04-23'
-  notes: AUTO-TAGGED (high confidence) ok
+  notes: Supplementary Table attachment (not a standalone publication) — OpenAlex
+    indexes these as distinct works by DOI; exclude from SRL list.
   tag_confidence: high
   tag_reasoning: This supplementary table from a 2024 paper examines associations
     between one-carbon metabolism-related vitamin intakes and breast density (ADBV)
     in young women across pubertal stages, directly relating to breast density measurement
     and cancer risk biomarker research with Shepherd as a co-author.
+  exclude: true
 
 - key: han-2024-supplementary
   title: Supplementary Table 2 from The Associations between Intakes of One-Carbon
@@ -1602,17 +1587,16 @@
     during young adulthood adjusted for youth intakes&lt;/p&gt;'
   openalex_id: W4393901157
   source_url: https://doi.org/10.1158/1055-9965.25532509
-  tags:
-  - breast-density
-  - mammography
-  - risk-modeling
+  tags: []
   added: '2026-04-23'
-  notes: AUTO-TAGGED (high confidence) ok
+  notes: Supplementary Table attachment (not a standalone publication) — OpenAlex
+    indexes these as distinct works by DOI; exclude from SRL list.
   tag_confidence: high
   tag_reasoning: This paper examines associations between one-carbon metabolism-related
     vitamin intakes and breast density (ADBV - absolute dense breast volume) among
     young women, directly relating to breast density measurement and cancer risk,
     with Shepherd as a co-author.
+  exclude: true
 
 - key: cipolla-2024-prediction
   title: Prediction of Total and Regional Body Composition from 3D BodyShape
@@ -17411,7 +17395,6 @@
     or health equity.
   exclude: true
 
-
 - key: njeh-2001-assessment
   title: Assessment of bone status using speed of sound at multiple anatomical sites
   authors: Njeh CF, Saeed I, Grigorian M, Kendler DL, Fan B, Shepherd J, McClung MR,
@@ -17612,7 +17595,7 @@
   tag_confidence: high
   tag_reasoning: manually reviewed and found not to be valid
   exclude: true
-  
+
 - key: shepherd-1997-study
   title: Study of afterglow in x-ray phosphors for use on fast-framing charge-coupled
     device detectors
@@ -17664,7 +17647,7 @@
   source_url: https://doi.org/10.1109/23.603783
   tags: []
   added: '2026-04-23'
-  notes: AUTO-TAGGED (high confidence) 
+  notes: AUTO-TAGGED (high confidence)
   tag_confidence: high
   tag_reasoning: This 1997 paper describes hardware development of a pixel array detector
     for X-ray diffraction studies, with no relevance to any of the Shepherd Research
@@ -18015,7 +17998,6 @@
     Center.
   exclude: true
 
-
 - key: shepherd-1986-accounting
   title: 'Accounting for Aggression: Perspectives on Aggression and Violence, Gerda
     Siann (Allen and Unwin, 1985), pp. 294, £20 and £6.95'
@@ -18101,7 +18083,7 @@
     no relevance to any of the Shepherd Research Lab's cancer, imaging, body composition,
     or Pacific Islander health research areas.
   exclude: true
-  
+
 - key: davies-1979-effects
   title: Effects of interpolated mugshot exposure on accuracy of eyewitness identification.
   authors: Davies G, Shepherd J, Ellis HD
