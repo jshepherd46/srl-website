@@ -11,6 +11,8 @@ description: "SRL AI research: deep learning for cancer detection, risk predicti
 
 Studies that use AI, machine learning, and deep learning to assess human health, discover trends in health risks, and predict disease.
 
+[See all studies →]({{ site.baseurl }}/studies/){: .btn .btn-outline-primary}
+
   </div>
 </section>
 
@@ -28,14 +30,17 @@ Based at the University of Hawaiʻi Cancer Center in Honolulu, AIPHI uses advanc
 ### The Makawalu Study — Breast Cancer Screening in the Pacific using Portable Ultrasound
 
 Addresses elevated advanced-stage breast-cancer rates in the Pacific relative to the US mainland, particularly in areas lacking mammography services.
+[Study details →]({{ site.baseurl }}/makawalu-study-breast-cancer-screening/)
 
 ### Deep Learning and Total-Body DXA Scans (TBDXA.I.)
 
 Applies deep learning to total-body DXA scan data to generate predictive algorithms for health outcomes.
+[Study details →]({{ site.baseurl }}/tbdxai/)
 
 ### Three-Compartment Breast Lesion Detection
 
 Examines computer-aided diagnostic systems and lesion-composition analysis in digital mammography. See the [featured paper on the homepage]({{ site.baseurl }}/).
+[Study details →]({{ site.baseurl }}/3cb/)
 
   </div>
 </section>

@@ -11,6 +11,8 @@ description: "SRL body-composition research: 3D optical scans, DXA, bioimpedance
 
 These studies examine fat, lean, and bone tissue to quantify how body shape relates to disease risk — including cancers and obesity. The lab also investigates how development and environment influence body composition.
 
+[See all studies →]({{ site.baseurl }}/studies/){: .btn .btn-outline-primary}
+
   </div>
 </section>
 
@@ -28,15 +30,17 @@ This initiative develops methods to measure health and body composition from 2D 
 ### Deep Learning and Total-Body DXA Scans (TBDXA.I.)
 
 Applies deep learning to neural networks trained on large DXA datasets to generate algorithms predicting health endpoints from total-body composition information.
+[Study details →]({{ site.baseurl }}/tbdxai/)
 
 ### Space-Feasible Body Composition for Long-Duration Missions (Astro3DO)
 
 Addresses the physiological challenges of long-duration spaceflight, including debilitating loss of muscle and bone mass during adaptation to microgravity.
+[Study details →]({{ site.baseurl }}/astro3do-3/)
 
 ## Completed Projects
 
-- Samsung Bioimpedance System Evaluation Study
-- Da Kine Body Composition Study
+- [Samsung Bioimpedance System Evaluation Study →]({{ site.baseurl }}/samsung-bioimpedance-system-evaluation-study/)
+- [Da Kine Body Composition Study →]({{ site.baseurl }}/dakine-body-composition/)
 
   </div>
 </section>

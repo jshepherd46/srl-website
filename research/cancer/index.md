@@ -11,6 +11,8 @@ description: "SRL cancer research: breast-cancer risk assessment, early detectio
 
 The Shepherd Research Lab conducts studies focused on cancer, particularly breast cancer. Our research goals include estimating breast-cancer probability and enhancing early-detection methods.
 
+[See all studies →]({{ site.baseurl }}/studies/){: .btn .btn-outline-primary}
+
   </div>
 </section>
 
@@ -27,18 +29,22 @@ A computerized database maintaining records of women undergoing breast imaging i
 ### Breast Cancer Risk Assessment in Hawaiʻi and the USAPI
 
 Funded by U54 Grant #5U54CA143727. Operating since 2003 through the University of Hawaiʻi Cancer Center.
+[Study details →]({{ site.baseurl }}/breast-cancer-risk-assessment-in-hawaiʻi-and-the-usapi/)
 
 ### The Makawalu Study — Breast Cancer Screening in the Pacific using Portable Ultrasound
 
 Addresses the elevated advanced-stage breast-cancer rates in Pacific regions where mammography services are limited.
+[Study details →]({{ site.baseurl }}/makawalu-study-breast-cancer-screening/)
 
 ### Deep Learning and Total-Body DXA Scans (TBDXA.I.)
 
 Applies deep-learning algorithms to total-body DXA scan data to predict health outcomes.
+[Study details →]({{ site.baseurl }}/tbdxai/)
 
 ### Three-Compartment Breast Lesion Detection
 
 Investigates how digital mammography and computer-aided diagnostic systems impact diagnostic performance using lesion-composition analysis. See the [featured paper on the homepage]({{ site.baseurl }}/).
+[Study details →]({{ site.baseurl }}/3cb/)
 
   </div>
 </section>
@@ -51,12 +57,14 @@ Investigates how digital mammography and computer-aided diagnostic systems impac
 ### Systematic Melanoma Assessment and Risk Triaging Study (SMART)
 
 Develops deep-learning computer-vision methods to triage lesions for biopsy while monitoring benign lesions.
+[Study details →]({{ site.baseurl }}/smart-melanoma/)
 
 ## Completed Projects
 
 ### Accessible Breast Cancer Screening in the Pacific
 
 Evaluated the iBreastExam's effectiveness as an early-detection tool among Pacific Islander women.
+[Study details →]({{ site.baseurl }}/ibreast/)
 
   </div>
 </section>
