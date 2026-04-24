@@ -33,6 +33,16 @@ PUBLICATIONS_FILE = "_data/publications.yaml"
 NEW_PAPERS_FILE = "new_papers_staging.yaml"
 PAGE_SIZE = 200
 
+# Titles matching this pattern are OpenAlex's indexed-under-their-own-DOI
+# supplementary attachments (Supplementary Table 1, Supplementary Figure 2,
+# Supplementary Movie S3, etc.). They're not standalone publications — the
+# main article is a separate work. Skip at ingest time so we don't waste
+# classify.py API calls on them and don't pollute the PR with attachment noise.
+SUPPLEMENTARY_TITLE_RE = re.compile(
+    r"^Supplementary\s+(Table|Figure|Data|Material|Materials|Methods|Information|File|Files|Movie|Video|Appendix|Text|Note|Notes|Fig)\b",
+    re.IGNORECASE,
+)
+
 
 def load_yaml(path):
     if not os.path.exists(path):
@@ -222,7 +232,7 @@ def main():
     works = fetch_all_works(AUTHOR_ID, ORCID)
     print(f"Retrieved {len(works)} works from OpenAlex.")
 
-    new_papers, skipped_dup = [], 0
+    new_papers, skipped_dup, skipped_supp = [], 0, 0
     seen_dois, seen_titles = set(), set()
 
     for w in works:
@@ -235,6 +245,11 @@ def main():
         if (doi and doi in seen_dois) or (tkey and tkey in seen_titles):
             skipped_dup += 1
             continue
+        # Filter supplementary-attachment entries before they hit classify.py
+        if SUPPLEMENTARY_TITLE_RE.match(parsed["title"] or ""):
+            skipped_supp += 1
+            print(f"  SKIP supplementary: {(parsed['title'] or '')[:80]}")
+            continue
         if doi:
             seen_dois.add(doi)
         if tkey:
@@ -242,8 +257,9 @@ def main():
         new_papers.append(parsed)
 
     print(f"\nResults:")
-    print(f"  Already in library: {skipped_dup}")
-    print(f"  New papers found:   {len(new_papers)}")
+    print(f"  Already in library:    {skipped_dup}")
+    print(f"  Supplementary skipped: {skipped_supp}")
+    print(f"  New papers found:      {len(new_papers)}")
 
     if new_papers:
         def year_key(p):
